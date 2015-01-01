@@ -4,7 +4,7 @@
 module.exports = (function () {
     'use strict';
     return {
-        path: '/home/xxxx/xxxx/xxx/',
+        pubPath: '/home/xxxx/xxxx/xxx/',
         port: 80
     };
 }());

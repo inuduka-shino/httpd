@@ -4,7 +4,6 @@
     'use strict';
     var express = require('express'),
         setting = require('../setting/setting_httpd.js'),
-        sampleRouter = require('../sample/'),
 
         app = express();
 
@@ -17,12 +16,15 @@
 
     app.use(
         '/pub/',
-        express.static(setting.path, {
+        express.static(setting.pubPath, {
             maxAge: '1d'
         })
     );
 
-    app.use('/sample', sampleRouter);
+    app.use('/sample', require('../sample/'));
+
+    //
+    app.use('/mbs', require('../makeBookSupporter/'));
 
     console.log('start service on ' + setting.port);
     app.listen(setting.port);

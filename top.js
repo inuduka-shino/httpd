@@ -9,7 +9,8 @@
     $linkTemp.remove();
 
     [
-        ['/sample', 'sample']
+        ['/sample', 'sample'],
+        ['/mbs', 'makeBookSupporter'],
     ].forEach(function (linkInfo) {
         var $link = $linkTemp.clone(),
             $a = $('a', $link);
