@@ -3,9 +3,13 @@
 (function () {
     'use strict';
     var express = require('express'),
+        bodyParser = require('body-parser'),
         setting = require('../setting/setting_httpd.js'),
 
         app = express();
+
+    // apiパスはbodyParseする
+    app.use('*/api/*', bodyParser());
 
     app.get('/', function (req, res) {
         res.sendFile(setting.topPath + '/top.html');
