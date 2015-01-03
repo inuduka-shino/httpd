@@ -4,7 +4,8 @@
 module.exports = (function () {
     'use strict';
     return {
-        pubPath: '/home/xxxx/xxxx/xxx/',
+        pubPath: '/home/xxxx/lib/',
+        topPath: '/home/xxxx/pageTop/',
         port: 80
     };
 }());

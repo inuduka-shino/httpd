@@ -8,10 +8,10 @@
         app = express();
 
     app.get('/', function (req, res) {
-        res.sendFile(__dirname + '/top.html');
+        res.sendFile(setting.topPath + '/top.html');
     });
     app.get('/top.js', function (req, res) {
-        res.sendFile(__dirname + '/top.js');
+        res.sendFile(setting.topPath + '/top.js');
     });
 
     app.use(
