@@ -17,6 +17,9 @@
     app.get('/top.js', function (req, res) {
         res.sendFile(setting.topPath + '/top.js');
     });
+    app.get('/favicon.ico', function (req, res) {
+        res.sendFile(setting.favicon);
+    });
 
     app.use(
         '/pub/',

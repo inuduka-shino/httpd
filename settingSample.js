@@ -6,6 +6,7 @@ module.exports = (function () {
     return {
         pubPath: '/home/xxxx/lib/',
         topPath: '/home/xxxx/pageTop/',
+        favicon: 'xxxx.jpg',
         port: 80
     };
 }());
