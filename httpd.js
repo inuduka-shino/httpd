@@ -9,7 +9,8 @@
         app = express();
 
     // apiパスはbodyParseする
-    app.use('*/api/*', bodyParser());
+    app.use('*/api/*', bodyParser.json());
+    //app.use('*/api/*', bodyParser());
 
     app.get('/', function (req, res) {
         res.sendFile(setting.topPath + '/top.html');
@@ -36,4 +37,3 @@
     console.log('start service on ' + setting.port);
     app.listen(setting.port);
 }());
-
